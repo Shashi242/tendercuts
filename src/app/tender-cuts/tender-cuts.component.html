@@ -1,0 +1,283 @@
+<div class="main_container">
+
+  <div class="navbar1_parent">
+    <div class="px-5 py-2 d-flex justify-content-between navbar1_child">
+      <div class="d-flex align-items-center text-secondary fw-bold navbar1">
+        <span class="text-size-sm">Download Our App:</span>
+        <img class="ms-1" src="https://cdn-icons-png.flaticon.com/128/0/747.png" />
+        <img class="ms-1" src="https://cdn-icons-png.flaticon.com/128/862/862537.png" />
+      </div>
+      <div class="">
+        <ul class="d-inline text-secondary">
+          <li class="d-inline pe-3 border-end border-secondary">Why TenderCuts</li>
+          <li class="d-inline px-3 border-end border-secondary">Blog</li>
+          <li class="d-inline px-3 border-end border-secondary">Franchise</li>
+          <li class="d-inline px-3 border-end border-secondary">Certificate</li>
+          <li class="d-inline px-3 border-end border-secondary">Store Locator</li>
+          <li class="d-inline ps-3">Careers</li>
+        </ul>
+      </div>
+      <div class="fw-bold text-secondary">
+        120 Minutes Delivery
+      </div>
+    </div>
+  </div>
+
+  <!-- 2nd Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar2_parent">
+    <div class="container-fluid">
+      <div>
+        <img src="https://www.tendercuts.in/assets/logo-white.png" class="navbar2_img1" />
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav navbar2_right align-items-end pe-3 ms-auto container">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <img src="https://cdn-icons-png.flaticon.com/128/206/206183.png" class="ms-5 navbar2_img2" />
+              <span class="ms-2 fw-bold text-light">THORAIPAKKAM STORE</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span class="ps-4 text-light fw-bold">
+                <img src="https://img.icons8.com/?size=50&id=7695&format=png" class="me-3" />
+                Search
+              </span>
+            </a>
+          </li>
+          <li class="nav-item mb-1">
+            <a class="nav-link" href="#">
+              <span class="ps-4 text-light fw-bold">
+                Login / Sign Up
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span class="ps-4 text-light d-flex align-items-center fw-bold cart" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <div class="carticon me-2">
+                  <span *ngIf="cartProducts.length !== 0" class="count">{{cartProducts.length}}</span>
+                  <!--   <span class="count">1</span> -->
+                  <i class="material-icons">shopping_cart</i>
+                </div>
+                Cart
+              </span>
+            </a>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- sliding window -->
+  <div id="carouselExampleIndicators" class="carousel slide carouselmain" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100">
+        <img src="https://cdn2.tendercuts.in/banners/5048fd9e-7822-4e98-b061-d8ad473c8eab.jpg"
+          class="d-block h-100 w-100" alt="...">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="https://cdn2.tendercuts.in/banners/256d27c8-b09e-445d-943b-f94402fa9385.jpg"
+          class="d-block h-100 w-100" alt="...">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="https://cdn2.tendercuts.in/banners/5a8133fa-538b-4491-9d0b-1baee26a426e.jpg"
+          class="d-block h-100 w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- why tender cuts -->
+  <div class="px-5 mt-4 fw-bold fs-4 justify-content-left">
+    Why TenderCuts ?
+  </div>
+  <div class="d-flex justify-content-center flex-wrap px-5 mt-2">
+    <div class="d-flex justify-content-between my-1 mx-3" *ngFor="let item of whytendercuts">
+      <div class="d-flex p-2 border border-secondary rounded whytendercut_icon">
+        <img src={{item.Image}} />
+        <div class="ms-2 d-flex flex-column">
+          <span>{{item.desc}}</span>
+          <span class="mt-auto text-danger">know more</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- products -->
+
+  <div class="px-5 mt-4">
+    <div class="border-bottom text-danger my-3">
+      <h3>Ready To Cook</h3>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center mb-5">
+      <div class="d-flex flex-wrap justify-content-center my-3" *ngFor="let item of productCard">
+        <div class="card mx-3" style="width: 22rem;">
+          <img src={{item.image}} class="bs-card-video" />
+          <div class="card-body d-flex flex-column">
+            <span class="item_name fw-bold text-secondary">{{item.name}}</span>
+            <p class="item_piece text-secondary">{{item.pieces}}</p>
+            <span class="item_weight p-2"><span class="fw-bold">Weight:</span> {{item.Weight}}</span>
+            <div class="d-flex align-items-center mt-3">
+              <span class="ms-2 fs-4 item_price">₹{{item.price}}</span>
+
+              <div *ngIf="item.clicked === true" class="d-flex container-fluid">
+                <span (click)="addToCart(item)"
+                  class="btn btn-primary ms-auto addtocartbtn border-0 rounded-0 d-flex align-items-center justify-content-center fw-bold">Add
+                  to cart</span>
+              </div>
+
+              <div *ngIf="item.clicked === false" class="d-flex align-items-center ms-auto">
+                <button (click)="decQty(item)"
+                  class="mx-4 rounded-circle border-0 bg-danger fw-bold text-light counterbtn d-flex align-items-center justify-content-center">-</button>
+                <span>{{item.qty}}</span>
+                <button (click)="incQty(item)"
+                  class="mx-4 rounded-circle border-0 bg-danger fw-bold text-light counterbtn d-flex align-items-center justify-content-center">+</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Checkout Our Blog -->
+
+  <div class="px-5 mt-4">
+    <div class="border-bottom text-danger my-3">
+      <h3>Checkout Our Blog</h3>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center mb-5">
+      <div class="d-flex flex-wrap justify-content-center my-2" *ngFor="let item of CheckOutBlog">
+        <div class="card mx-3" style="width: 22rem;">
+          <img src={{item.image}} class="bs-card-video h-100" />
+          <div class="card-body d-flex justify-content-center align-items-center">
+            <span class="item_name fw-bold"><a href={{item.pageLink}}
+                class="text-danger text-decoration-none checkout_name">{{item.name}}</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Shopping cart items -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content cart_container">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div *ngIf="cartProducts.length === 0" class="d-flex align-items-center justify-content-center">
+            <h5>Your cart is empty</h5>
+          </div>
+
+          <div  *ngFor="let item of cartProducts">
+
+            <div class="card rounded-3 flex-nowrap mb-4">
+
+              <!-- <div class="card-body p-2"> -->
+
+              <div class="py-2 d-flex pe-3 justify-content-between align-items-center">
+                <div class="col-sm-1 col-xl-2 w-25">
+                  <img src={{item.image}} class="img-fluid rounded-3" alt="Cotton T-shirt">
+                </div>
+
+                <div class="cartitemrow d-flex w-75 justify-content-between align-items-center">
+
+                  <div class="col-md-3 col-lg-3 d-flex align-items-center justify-content-start col-xl-3">
+                    <p class="lead fw-normal fw-bold mt-3 cartitem_list_name">{{item.name}}</p>
+                  </div>
+
+                  <div class="col-md-3 col-lg-3 col-xl-3">
+                    <h5 class="mb-0 cartitem_list_name">₹{{item.price}}</h5>
+                  </div>
+
+                  <div class="col-md-3 col-lg-3 col-xl-2 d-flex p-0 ms-auto">
+                    <div *ngIf="item.clicked === false" class="d-flex align-items-center">
+                      <button (click)="decQty(item)"
+                        class="me-4 rounded-circle border-0 bg-danger fw-bold text-light counterbtn d-flex align-items-center justify-content-center">-</button>
+                      <span>{{item.qty}}</span>
+                      <button (click)="incQty(item)"
+                        class="ms-4 rounded-circle border-0 bg-danger fw-bold text-light counterbtn d-flex align-items-center justify-content-center">+</button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- </div> -->
+            </div>
+
+          </div>
+
+
+          <!-- <div class="d-flex justify-content-between align-items-center" *ngFor="let item of cartProducts.cart">
+          <div class="col-md-2 col-lg-2 col-xl-2">
+            <img
+              src={{item.image}}
+              class="img-fluid rounded-3" alt="Cotton T-shirt">
+          </div>
+          <div class="me-auto">
+            <p class="lead fw-bold my-2 cartItem_name">{{item.name}}</p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+            <h5 class="mb-0">{{item.price}}</h5>
+          </div>
+        </div> -->
+
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <div *ngIf="cartProducts.length !== 0" class="d-flex align-items-center justify-content-center">
+            <h5>TOTAL PAY: <span class="text-danger">₹{{TotalCost}}</span></h5>
+          </div>
+          <button *ngIf="cartProducts.length !== 0" type="button" class="btn btn-danger rounded-0" data-toggle="modal" data-target=".bd-example-modal-sm" data-bs-dismiss="modal" aria-label="Close" (click)="emptyCart();">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button> -->
+
+  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content d-flex justify-content-center align-items-center p-5">
+        Your Order is Completed Successfully...
+      </div>
+    </div>
+  </div>
+
+</div>
